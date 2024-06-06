@@ -1,8 +1,9 @@
 // components/CatRegistrationForm.js
-
+"use client"
 import { useState } from 'react';
 
 const CatRegistrationForm = () => {
+
     const [formData, setFormData] = useState({
         name: '',
         age: '',

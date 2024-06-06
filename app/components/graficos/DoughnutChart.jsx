@@ -49,7 +49,7 @@ const DoughnutChart = (props) => {
         cutout: '70%',
     };
 
-    return <div className="relative w-32 h-32">
+    return <div className="relative w-24 h-24">
         <div>
             <Doughnut data={data} options={options} />
         </div>

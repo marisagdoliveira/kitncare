@@ -38,3 +38,17 @@ export async function PATCH(req) {
     }
 }
 
+export async function GET(req) {
+    try {
+        await connectMongoDB();
+
+        
+        const cats = await Supplies.find({}).lean();
+
+        return NextResponse.json(cats, { status: 200 });
+    } catch (error) {
+        console.error(error);
+        return NextResponse.json({ message: "An error occurred while retrieving cats." }, { status: 500 });
+    }
+}
+

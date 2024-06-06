@@ -70,7 +70,7 @@ export default function Login1() {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                name, email, password
+                name, email, password, staff
             })
         });
 

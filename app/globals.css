@@ -27,7 +27,7 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100%;
     font-family: 'Jost', sans-serif;
     background: linear-gradient(to bottom, #cfab6d, #eeedc4, #cfab6d); /*background colors*/
   }
@@ -37,21 +37,21 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100%;
     font-family: 'Jost', sans-serif;
     background: linear-gradient(to bottom, #cfab6d,
       #eeedc4,
       #cfab6d); /*background colors*/
   }
   .main1 {
-  width: 390px;
+  width: 340px;
   height: 550px;
   background: linear-gradient(to bottom, #cfab6d,
     #eeedc4,
     #cfab6d); /*background colors*/
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 5px 20px 50px #000;
+  box-shadow: 5px 20px 20px #0000004a;
   position: relative; /* Add this */
 }
 

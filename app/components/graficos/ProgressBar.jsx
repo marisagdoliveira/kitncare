@@ -12,6 +12,7 @@ const ProgressBar = (props) => {
     }
 
     const consumoPercentage = Math.round((totalConsumo / totalRecursos) * 100);
+    const remainingPercentage = 100 - consumoPercentage;
 
     let backgroundColor;
     if (consumoPercentage >= 80) {
@@ -32,7 +33,7 @@ const ProgressBar = (props) => {
 
     const fillerStyles = {
         height: '100%',
-        width: `${consumoPercentage}%`,
+        width: `${remainingPercentage}%`,
         backgroundColor: backgroundColor,
         borderRadius: 'inherit',
         textAlign: 'right'
@@ -47,7 +48,7 @@ const ProgressBar = (props) => {
     return (
         <div style={containerStyles}>
             <div style={fillerStyles}>
-                <span style={labelStyles}>{`${consumoPercentage}%`}</span>
+                <span style={labelStyles}>{`${remainingPercentage}%`}</span> 
             </div>
         </div>
     );

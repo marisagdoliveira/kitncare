@@ -9,50 +9,46 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 const PieChart = (props) => {
     const { totalRecursos, totalConsumo } = props;
 
-    // Calculate consumption percentage
-    const consumoPercentage = (totalConsumo / totalRecursos) * 100;
+    const supplyRemainingPercentage = Math.round(((totalRecursos - totalConsumo) / totalRecursos) * 100);
 
-    // Debugging logs
     console.log("Total Recursos:", totalRecursos);
     console.log("Total Consumo:", totalConsumo);
-    console.log("Consumo Percentage:", consumoPercentage);
+    console.log("Supply Remaining Percentage:", supplyRemainingPercentage);
 
-    // Determine the color based on the percentage
     let backgroundColor, hoverBackgroundColor;
-    if (consumoPercentage >= 80) {
-        backgroundColor = '#FF5733';
+    if (supplyRemainingPercentage <= 40) {
+        backgroundColor = '#FF5733'; // Red for low supply
         hoverBackgroundColor = '#FF5733';
-    } else if (consumoPercentage >= 60 && consumoPercentage < 80) {
-        backgroundColor = '#FFA500';
+    } else if (supplyRemainingPercentage > 40 && supplyRemainingPercentage <= 70) {
+        backgroundColor = '#FFA500'; // Orange for medium supply
         hoverBackgroundColor = '#FFA500';
     } else {
-        backgroundColor = '#4CAF50';
+        backgroundColor = '#4CAF50'; // Green for high supply
         hoverBackgroundColor = '#45A049';
     }
 
-    // Debugging logs for colors
     console.log("Background Color:", backgroundColor);
 
-    // Prepare the data for the chart
     const data = {
         datasets: [
             {
-                data: [consumoPercentage, 100 - consumoPercentage], // Use percentages for consistency
+                data: [supplyRemainingPercentage, 100 - supplyRemainingPercentage],
                 backgroundColor: [backgroundColor, '#E0E0E0'],
                 hoverBackgroundColor: [hoverBackgroundColor, '#D3D3D3'],
             },
         ],
-        labels: ['Consumo', 'Restante'],
+        labels: ['Remaining', 'Used'],
     };
 
-    // Define options (if any)
     const options = {};
 
-    return <div className="relative w-32 h-32">
-        <div>
-            <Pie data={data} options={options} />
+    return (
+        <div className="relative w-32 h-32">
+            <div>
+                <Pie data={data} options={options} />
+            </div>
         </div>
-    </div>;
+    );
 };
 
 export default PieChart;

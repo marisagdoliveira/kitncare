@@ -18,18 +18,18 @@ const DoughnutChart = (props) => {
         return null;
     }
 
-    const consumoPercentage = Math.round((totalConsumo / totalRecursos) * 100);
-    console.log('consumoPercentage:', consumoPercentage);
+    const supplyRemainingPercentage = Math.round(((totalRecursos - totalConsumo) / totalRecursos) * 100);
+    console.log('supplyRemainingPercentage:', supplyRemainingPercentage);
 
     let backgroundColor, hoverBackgroundColor;
-    if (consumoPercentage >= 80) {
-        backgroundColor = '#FF5733';
+    if (supplyRemainingPercentage <= 40) {
+        backgroundColor = '#FF5733'; // Red for low supply
         hoverBackgroundColor = '#FF5733';
-    } else if (consumoPercentage >= 60 && consumoPercentage < 80) {
-        backgroundColor = '#FFA500';
+    } else if (supplyRemainingPercentage > 40 && supplyRemainingPercentage <= 70) {
+        backgroundColor = '#FFA500'; // Orange for medium supply
         hoverBackgroundColor = '#FFA500';
     } else {
-        backgroundColor = '#4CAF50';
+        backgroundColor = '#4CAF50'; // Green for high supply
         hoverBackgroundColor = '#45A049';
     }
 
@@ -38,7 +38,7 @@ const DoughnutChart = (props) => {
     const data = {
         datasets: [
             {
-                data: [consumoPercentage, 100 - consumoPercentage],
+                data: [supplyRemainingPercentage, 100 - supplyRemainingPercentage],
                 backgroundColor: [backgroundColor, '#E0E0E0'],
                 hoverBackgroundColor: [hoverBackgroundColor, '#D3D3D3'],
             },

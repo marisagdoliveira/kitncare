@@ -1,4 +1,4 @@
-import Cat from "@/models/Cat";
+import Cat from "@/models/cat";
 import { NextResponse } from "next/server";
 import { connectMongoDB } from "@/lib/mongodb";
 
@@ -64,3 +64,4 @@ const calculateConsumption = (healthState, size, age) => {
 
     return { foodType, quantity: `${baseQuantity}g/day` };
 };
+

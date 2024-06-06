@@ -29,7 +29,7 @@ export default function Login1() {
                 return;
             }
               
-            router.replace("dashboard");
+            router.replace("homepage");
 
         } catch (error) {
             console.log(error);
@@ -112,7 +112,7 @@ export default function Login1() {
 
       <div className="login">
         <form onSubmit={handleSubmit}>
-          <label htmlFor="chk" aria-hidden="true">Login</label>
+          <label htmlFor="chk" aria-hidden="true" className="mt-10">Login</label>
           <input onChange={e => setEmail(e.target.value)} type="email" name="email" placeholder="Email" required />
           <input onChange={e => setPassword(e.target.value)} type="password" name="pswd" placeholder="Password" required />
           <button>Login</button>

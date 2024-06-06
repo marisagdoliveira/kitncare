@@ -11,7 +11,7 @@ export default async function Home() {
   if (session) redirect("/homepage");
 
   return (
-    <main className="bg-zinc-700">
+    <main className="bg-zinc-700 w-[390px] h-[844px] flex flex-col justify-center items-center">
       <Login1 />
       
     </main>

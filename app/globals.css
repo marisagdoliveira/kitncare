@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input {
+    @apply w-[300px] rounded-md px-3 py-2 shadow-sm
+    focus:outline-none focus:ring-2 focus:ring-purple-600   /*MUDAR COR FOCUS INPUTS */
+    focus:border-transparent bg-purple-300/30  /*MUDAR COR FOCUS INPUTS */
+}
+
+.text-gradient {
+    background: linear-gradient(to bottom right, #9208C2, #309CFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .box-gradient {
+    background: linear-gradient(to bottom right, #9208C2, #309CFF);
+  }
+
+
+/*inicio login 1*/
+  
+  body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+    background: linear-gradient(to bottom, #0c291a, #2b634f, #243e37); /*background colors*/
+  }
+  .body1{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+    background: linear-gradient(to bottom, #0c291a, #2b634f, #243e37); /*background colors*/
+  }
+  .main1 {
+  width: 350px;
+  height: 500px;
+  background: linear-gradient(to bottom, #0c291a, #2b634f, #243e37); /*background colors*/
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 5px 20px 50px #000;
+  position: relative; /* Add this */
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../public/assets/hand-background.png") no-repeat center/ cover;
+  opacity: 0.3; /* Set the opacity here */
+}
+
+
+  #chk{
+    display: none;
+  }
+  .signup{
+    position: relative;
+    width:100%;
+    height: 100%;
+  }
+  label{
+    color: #fff;
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+  }
+  input{
+    width: 60%;
+    height: 10px;
+    background: #e0dede;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 12px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+  }
+  button{   /*background colors buttons*/
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: #3b8a6e;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+  }
+  button:hover{
+    background: #44b884;  /*hover: background colors buttons*/
+  }
+  .login{
+    height: 460px;
+    background: #eee;
+    border-radius: 60% / 10%;
+    transform: translateY(-180px);
+    transition: .8s ease-in-out;
+  }
+  .login label{
+    color: #3b8a6e;
+    transform: scale(.6);
+  }
+  
+  #chk:checked ~ .login{
+    transform: translateY(-500px);
+  }
+  #chk:checked ~ .login label{
+    transform: scale(1);	
+  }
+  #chk:checked ~ .signup label{
+    transform: scale(.6);
+  }
+  
+
+ /*fim login 1*/

@@ -43,7 +43,7 @@ const Menus = [
 
   return (
     <div className="fixed bottom-0 left-0 right-0">
-      <div className="bg-gray-800 h-16 w-full flex justify-around items-center mx-auto relative">
+          <div className="bg-[#181818] h-16 w-full flex justify-around items-center mx-auto relative">
         <ul className="flex justify-around w-full relative ">
           <span
             className="bg-yellow-600 duration-500 border-4 border-gray-900 h-14 w-14 absolute top-0 transform -translate-y-1/2 rounded-full flex justify-center items-center"

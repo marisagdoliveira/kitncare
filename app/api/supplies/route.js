@@ -7,7 +7,7 @@ export async function PATCH(req) {
     try {
         await connectMongoDB();
         const body = await req.json();
-        const { normalFood, specialFood, areia, medKit } = body;
+        const { normalFood, specialFood, sand, medKit } = body;
 
         let getSupplies = await Supplies.findOne();
 
@@ -15,15 +15,14 @@ export async function PATCH(req) {
             return NextResponse.json({ message: "Supplies not found." }, { status: 404 });
         }
 
-        // Update supplies if values are provided
         if (normalFood !== undefined) {
             getSupplies.normalFood = normalFood;
         }
         if (specialFood !== undefined) {
             getSupplies.specialFood = specialFood;
         }
-        if (areia !== undefined) {
-            getSupplies.areia = areia;
+        if (sand !== undefined) {
+            getSupplies.sand = sand;
         }
         if (medKit !== undefined) {
             getSupplies.medKit = medKit;
@@ -33,7 +32,7 @@ export async function PATCH(req) {
 
         return NextResponse.json({ supplies: getSupplies }, { status: 200 });
     } catch (error) {
-        console.error(error); // Log the error for debugging
+        console.error(error);
         return NextResponse.json({ message: "An error occurred while updating the supplies." }, { status: 500 });
     }
 }
@@ -42,7 +41,7 @@ export async function GET(req) {
     try {
         await connectMongoDB();
 
-        
+
         const cats = await Supplies.find({}).lean();
 
         return NextResponse.json(cats, { status: 200 });

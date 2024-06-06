@@ -6,7 +6,7 @@ export async function GET(req) {
     try {
         await connectMongoDB();
 
-        // Query the "cats" collection to retrieve all documents
+
         const cats = await Cat.find({}).lean();
 
         return NextResponse.json(cats, { status: 200 });

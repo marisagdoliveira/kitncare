@@ -1,6 +1,6 @@
 import { connectMongoDB } from "@/lib/mongodb";
 import mongoose from "mongoose";
-import Cat from "@/models/cat"; // Import the Cat model
+import Cat from "@/models/cat"; 
 import { NextResponse } from "next/server";
 
 export async function GET(req) {

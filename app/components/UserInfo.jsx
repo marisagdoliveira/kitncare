@@ -10,7 +10,7 @@ export default function UserInfo() {
     <div className="relative h-[800px] w-screen overflow-hidden">
       <div className="background1 h-[800px] absolute z-1 top-0 left-0 h-full w-full"></div>
       <div className="flex justify-center w-full mt-20">
-        <div className="flex justify-center mb-[-200px] w-fit h-fit rounded-full bg-[#72625A]">
+        <div className="flex justify-center mb-[-200px] w-fit h-fit rounded-full bg-[#85563f]">
           <Logo className="size-36" />
         </div>
       </div>

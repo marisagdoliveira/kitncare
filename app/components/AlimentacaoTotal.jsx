@@ -43,10 +43,10 @@ export default function AlimentacaoTotal() {
             <div className="w-[300px] h-[200px] flex flex-col gap-2 justify-center items-center">
                 <h1 className="text-xl font-bold text-[#72625A]">Normal Food</h1>
                 <DoughnutChart totalRecursos={totalRecursos} totalConsumo={totalConsumo} />
-                <div className='flex justify-center gap-1 justify-center font-semibold text-zblack'>
-                    <p>Demand: {totalConsumo}kg</p>
-                    <p>Supply: {totalRecursos}kg</p>
-                    <p>Days Remaining: {daysRemaining}</p>
+                <div className='flex justify-center gap-1 px-4 justify-center font-semibold text-[#72625A]'>
+                    <div className="rounded-xl px-4 shadow-md bg-[#f0cdbb] flex flex-col items-center justify-center"><p>Demand: {totalConsumo}kg</p></div>
+                    <div className="rounded-xl px-4 shadow-md bg-[#6f4f3f] text-[#f0cdbb] flex flex-col items-center justify-center" ><p>Supply: {totalRecursos}kg</p></div>
+                    <div className="rounded-xl px-4 shadow-md bg-[#f0cdbb] flex flex-col items-center justify-center"><p>Days Remaining: {daysRemaining}</p></div>
                 </div>
             </div>
         </div>

@@ -60,13 +60,14 @@ const UpdateSuppliesForm = () => {
     return (
         <div className="flex flex-col justify-center items-center h-screen">
             <div className="text-[#645751] p-4 rounded-lg mt-4 mb-4">
+
                 <h1 className="text-4xl font-semibold">Supply</h1>
             </div>
-            <div className="bg-[#645751] p-10 rounded-lg pr-3 pl-3">
+            <div className="bg-[#645751] p-10 rounded-2xl px-6">
                 <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                     {Object.keys(initialQuantities).map((key) => (
-                        <div key={key} className="border rounded-lg bg-[#C29B87] p-2 flex items-center justify-between h-16">
-                            <label className="text-lg mr-2 w-32">{key}:</label>
+                        <div key={key} className=" rounded-lg bg-[#C29B87] p-2 flex items-center justify-between h-16">
+                            <label className="text-lg mr-2 w-32">{key === "normalFood" ? "Normal Food" : key === "specialFood" ? "Special Food" : key === "sand" ? "Sand" : "Med Kit"}:</label>
                             <div className="flex items-center">
                                 <button
                                     type="button"
@@ -95,7 +96,7 @@ const UpdateSuppliesForm = () => {
                     ))}
                     <button
                         type="submit"
-                        className="bg-[#969393] text-white px-4 py-2 rounded-lg"
+                        className="bg-[#97755c] text-white px-4 py-2 rounded-lg"
                     >
                         Update Supplies
                     </button>

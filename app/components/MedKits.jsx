@@ -35,10 +35,10 @@ export default function MedKits() {
             <div className="w-[300px] h-[200px] flex flex-col gap-2 justify-center items-center">
                 <h1 className="text-xl font-bold text-black">Medical Kits</h1>
                 <BarChart totalRecursos={medkitsSupply} totalConsumo={medkitsConsumption} />
-                <div className='flex gap-10 w-[30px] justify-center font-semibold text-black'>
-                    <p>Demand: {medkitsConsumption} medkits</p>
-                    <p>Supply: {medkitsSupply} medkits</p>
-                    <p>Days Remaining: {daysRemaining}</p>
+                <div className='flex gap-4 w-[30px] justify-center font-semibold text-black'>
+                    <div className="rounded-xl p-2 shadow-md bg-[#654230] text-white flex flex-col items-center justify-center"><p>Demand: {medkitsConsumption} medkits</p></div>
+                    <div className="rounded-xl p-2 shadow-md bg-[#f0cdbb] flex flex-col items-center justify-center"><p>Supply: {medkitsSupply} medkits</p></div>
+                    <div className="rounded-xl p-2 shadow-md bg-[#654230] flex text-white flex-col items-center justify-center"><p>Days Remaining: {daysRemaining}</p></div>
                 </div>
             </div>
         </div>

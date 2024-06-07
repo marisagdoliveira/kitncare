@@ -25,8 +25,9 @@ const NavBar = () => {
             case "/listofcats":
                 return 2;
             case "/homepage":
-            default:
                 return 0;
+            default:
+                return null;
         }
     };
     const [currentUrl1, setCurrentUrl] = useState(null);

@@ -16,7 +16,7 @@ const CatProfile = ({ cat, onClose, imgPath }) => {
                     const totalCats = await getTotalCats(); // Assume you have a function to get total cats from the API
                     if (totalAvailableFood && totalCats) {
                         const totalResourcesForCat = totalAvailableFood / totalCats;
-                        setTotalRecursos(totalResourcesForCat);
+                        setTotalRecursos(Math.round(totalResourcesForCat));
                         // Extract only numbers from cat.consumption.quantity
                         const quantity = cat.consumption.quantity;
                         const extractedNumbers = quantity.match(/\d+/g);

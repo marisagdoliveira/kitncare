@@ -54,11 +54,11 @@ export default function Homepage() {
     };
 
     return (
-        <div className="h-screen">
+        <div className="h-fit mb-32">
             {error ? (
                 <p>An error occurred: {error}</p>
             ) : (
-                <ul className="flex flex-col gap-2 mt-10 overflow-auto">
+                <ul className="flex flex-col gap-2 mt-10 ">
                     {cats.map((cat, index) => (
                         <li key={cat._id}>
                             <div

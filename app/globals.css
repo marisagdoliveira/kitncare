@@ -114,7 +114,7 @@ input {
   }
   .login{
     height: 500px;
-    background: #bda59a;
+    background: #877871;
     border-radius: 60% / 10%;
     transform: translateY(-135px);
     transition: .8s ease-in-out;

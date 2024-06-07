@@ -50,7 +50,7 @@ const CatRegistrationForm = () => {
 
   return (
     <form
-      className="cat-form overflow-hidden mb-32 mt-10 p-4 rounded-lg bg-[#D9BFB0]"
+      className="flex flex-col gap-5 cat-form overflow-hidden mb-32 w-[390px] mt-10 p-4 bg-[#D9BFB0]"
       onSubmit={handleSubmit}
     >
       <div className="rounded-lg bg-[#D9BFB0] border bg-[#C29B87] p-4 m-4 text-xs shadow-lg">

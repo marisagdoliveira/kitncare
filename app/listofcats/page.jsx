@@ -54,7 +54,7 @@ export default function Homepage() {
     };
 
     return (
-        <div className="h-fit mb-32">
+        <div className="h-fit mb-32 font-sans">
             {error ? (
                 <p>An error occurred: {error}</p>
             ) : (

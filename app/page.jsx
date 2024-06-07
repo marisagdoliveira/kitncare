@@ -11,7 +11,7 @@ export default async function Home() {
   if (session) redirect("/homepage");
 
   return (
-    <main className="w-[390px] h-[844px] flex flex-col justify-center items-center">
+    <main className="w-[390px] h-[844px] flex flex-col justify-center items-center font-sans">
       <Login1 />
       
     </main>

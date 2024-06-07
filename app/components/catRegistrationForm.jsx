@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { FaHeartCirclePlus } from "react-icons/fa6";
-
+import LogoCat from "../../public/assets/logo-cat.svg"
 
 
 const CatRegistrationForm = () => {

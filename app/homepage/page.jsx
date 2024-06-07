@@ -16,7 +16,7 @@ export default function Homepage() {
 
     return (
         <div >
-            <div className="mt-10 my-4 pt-5 w-full flex justify-center">
+            <div className="mt-10 my-4 pt-5 w-full flex justify-center font-sans">
                 <LogoCat className="size-32" />
                 </div>
             <div className="mb-10 py-14 bg-[#947363] w-full flex justify-center">

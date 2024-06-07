@@ -16,16 +16,16 @@ export async function PATCH(req) {
         }
 
         if (normalFood !== undefined) {
-            getSupplies.normalFood = normalFood;
+            getSupplies.normalFood += normalFood;
         }
         if (specialFood !== undefined) {
-            getSupplies.specialFood = specialFood;
+            getSupplies.specialFood += specialFood;
         }
         if (sand !== undefined) {
-            getSupplies.sand = sand;
+            getSupplies.sand += sand;
         }
         if (medKit !== undefined) {
-            getSupplies.medKit = medKit;
+            getSupplies.medKit += medKit;
         }
 
         await getSupplies.save();

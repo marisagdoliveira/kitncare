@@ -50,10 +50,10 @@ const CatRegistrationForm = () => {
 
   return (
     <form
-      className="cat-form overflow-hidden mb-32 mt-10 p-4 rounded-lg bg-yellow-100"
+      className="cat-form overflow-hidden mb-32 mt-10 p-4 rounded-lg bg-[#D9BFB0]"
       onSubmit={handleSubmit}
     >
-      <div className="rounded-lg bg-yellow-200 border border-yellow-600 p-4 m-4 text-xs shadow-lg">
+      <div className="rounded-lg bg-[#D9BFB0] border bg-[#C29B87] p-4 m-4 text-xs shadow-lg">
         <div className="flex flex-col space-y-2">
           <label className="text-brown-700 font-semibold">Name:</label>
           <input
@@ -62,12 +62,12 @@ const CatRegistrationForm = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            className="p-2 bg-white border border-yellow-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
+            className="p-2 bg-white border bg-[#C29B87] rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
           />
         </div>
       </div>
 
-      <div className="rounded-lg bg-yellow-200 border border-yellow-600 p-4 m-4 text-xs shadow-lg">
+      <div className="rounded-lg bg-[#D9BFB0] border bg-[#C29B87] p-4 m-4 text-xs shadow-lg">
         <div className="flex flex-col space-y-2">
           <label className="text-brown-700 font-semibold">Age:</label>
           <input
@@ -76,12 +76,12 @@ const CatRegistrationForm = () => {
             value={formData.age}
             onChange={handleChange}
             required
-            className="p-2 bg-white border border-yellow-600rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
+            className="p-2 bg-white border bg-[#C29B87]rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
           />
         </div>
       </div>
 
-      <div className="rounded-lg bg-yellow-200 border border-yellow-600 p-4 m-4 text-xs shadow-lg">
+      <div className="rounded-lg bg-[#D9BFB0] border bg-[#C29B87] p-4 m-4 text-xs shadow-lg">
         <div className="flex flex-col space-y-2">
           <label className="text-brown-700 font-semibold">Gender:</label>
           <select
@@ -100,7 +100,7 @@ const CatRegistrationForm = () => {
         </div>
       </div>
 
-      <div className="rounded-lg bg-yellow-200 border border-yellow-600 p-4 m-4 text-xs shadow-lg">
+      <div className="rounded-lg bg-[#D9BFB0] border bg-[#C29B87] p-4 m-4 text-xs shadow-lg">
         <div className="flex items-center justify-between">
           <div>
             <label className="text-brown-700">Castrated</label>
@@ -117,7 +117,7 @@ const CatRegistrationForm = () => {
         </div>
       </div>
 
-      <div className="rounded-lg bg-yellow-200 border border-yellow-600 p-4 m-4 text-xs shadow-lg">
+      <div className="rounded-lg bg-[#D9BFB0] border bg-[#C29B87] p-4 m-4 text-xs shadow-lg">
         <div className="flex flex-col space-y-2">
           <label className="text-brown-700 font-semibold">Size:</label>
           <select
@@ -137,7 +137,7 @@ const CatRegistrationForm = () => {
         </div>
       </div>
 
-      <div className="rounded-lg bg-yellow-200 border border-yellow-600 p-4 m-4 text-xs shadow-lg">
+      <div className="rounded-lg bg-[#D9BFB0] border bg-[#C29B87] p-4 m-4 text-xs shadow-lg">
         <div className="flex items-center justify-between">
           <div>
             <label className="text-brown-700">Healthy</label>
@@ -154,7 +154,7 @@ const CatRegistrationForm = () => {
         </div>
       </div>
 
-      <div className="rounded-lg bg-yellow-200 border border-yellow-600 p-4 m-4 text-xs shadow-lg">
+      <div className="rounded-lg bg-[#D9BFB0] border bg-[#C29B87] p-4 m-4 text-xs shadow-lg">
         <div className="flex items-center justify-between">
           <div >
             <label className="text-brown-700">Allergies</label>
@@ -171,7 +171,7 @@ const CatRegistrationForm = () => {
         </div>
       </div>
 
-      <div className="rounded-lg bg-yellow-200 border border-yellow-600 p-4 m-4 text-xs shadow-lg">
+      <div className="rounded-lg bg-[#D9BFB0] border bg-[#C29B87] p-4 m-4 text-xs shadow-lg">
         <div className="flex items-center justify-between ">
           <div>
             <label className="text-brown-700">Vaccinated</label>

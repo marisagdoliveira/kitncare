@@ -4,19 +4,10 @@
 
 input {
     @apply w-[300px] rounded-md px-3 py-2 shadow-sm
-    focus:outline-none focus:ring-2 focus:ring-[#D9BFB0]   /*MUDAR COR FOCUS INPUTS */
-    focus:border-transparent bg-[#72625A]  /*MUDAR COR FOCUS INPUTS */
+    focus:outline-none focus:ring-2 focus:ring-[#C29B87]   /*MUDAR COR FOCUS INPUTS */
+    focus:border-transparent bg-[#C29B87]  /*MUDAR COR FOCUS INPUTS */
 }
 
-.text-gradient {
-    background: linear-gradient(to bottom right, #9208C2, #309CFF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .box-gradient {
-    background: linear-gradient(to bottom right, #9208C2, #309CFF);
-  }
 
 
 /*inicio login 1*/

@@ -49,12 +49,13 @@ const CatRegistrationForm = () => {
   };
 
   return (
-    <form
-      className="flex flex-col gap-5 cat-form overflow-hidden mb-32 w-[390px] mt-10 p-4 bg-[#D9BFB0]"
+<form
+      className="cat-form overflow-hidden mb-32 mr-5 ml-5 mt-10 p-4 rounded-lg"
       onSubmit={handleSubmit}
     >
+
       <div className="rounded-lg bg-[#D9BFB0] border bg-[#C29B87] p-4 m-4 text-xs shadow-lg">
-        <div className="flex flex-col space-y-2">
+        <div className="flex justify-between space-y-2">
           <label className="text-brown-700 font-semibold">Name:</label>
           <input
             type="text"
@@ -62,13 +63,13 @@ const CatRegistrationForm = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            className="p-2 bg-white border bg-[#C29B87] rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
+            className="p-2 bg-white border bg-[#C29B87] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C29B87]"
           />
         </div>
       </div>
 
       <div className="rounded-lg bg-[#D9BFB0] border bg-[#C29B87] p-4 m-4 text-xs shadow-lg">
-        <div className="flex flex-col space-y-2">
+        <div className="flex justify-between space-y-2">
           <label className="text-brown-700 font-semibold">Age:</label>
           <input
             type="text"
@@ -76,20 +77,20 @@ const CatRegistrationForm = () => {
             value={formData.age}
             onChange={handleChange}
             required
-            className="p-2 bg-white border bg-[#C29B87]rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
+            className="p-2 bg-white border bg-[#C29B87]rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C29B87]"
           />
         </div>
       </div>
 
       <div className="rounded-lg bg-[#D9BFB0] border bg-[#C29B87] p-4 m-4 text-xs shadow-lg">
-        <div className="flex flex-col space-y-2">
+        <div className="flex justify-between space-y-2">
           <label className="text-brown-700 font-semibold">Gender:</label>
           <select
             name="gender"
             value={formData.gender}
             onChange={handleChange}
             required
-            className="p-2 border border-yellow-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
+            className="p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C29B87]"
           >
             <option value="" disabled>
               Select...
@@ -103,7 +104,7 @@ const CatRegistrationForm = () => {
       <div className="rounded-lg bg-[#D9BFB0] border bg-[#C29B87] p-4 m-4 text-xs shadow-lg">
         <div className="flex items-center justify-between">
           <div>
-            <label className="text-brown-700">Castrated</label>
+            <label className="text-brown-700 font-semibold">Castrated</label>
           </div>
           <div>
             <input
@@ -111,21 +112,21 @@ const CatRegistrationForm = () => {
               name="castrated"
               checked={formData.castrated}
               onChange={handleChange}
-              className="form-checkbox h-4 w-4 text-yellow-500 border-yellow-400 focus:ring-yellow-500"
+              className="form-checkbox h-4 w-4 text-[#D9BFB0] focus:ring-[#C29B87]"
             />
           </div>
         </div>
       </div>
 
       <div className="rounded-lg bg-[#D9BFB0] border bg-[#C29B87] p-4 m-4 text-xs shadow-lg">
-        <div className="flex flex-col space-y-2">
+        <div className="flex justify-between space-y-2">
           <label className="text-brown-700 font-semibold">Size:</label>
           <select
             name="size"
             value={formData.size}
             onChange={handleChange}
             required
-            className="p-2 border border-yellow-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
+            className="p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C29B87]"
           >
             <option value="" disabled>
               Select...
@@ -140,7 +141,7 @@ const CatRegistrationForm = () => {
       <div className="rounded-lg bg-[#D9BFB0] border bg-[#C29B87] p-4 m-4 text-xs shadow-lg">
         <div className="flex items-center justify-between">
           <div>
-            <label className="text-brown-700">Healthy</label>
+            <label className="text-brown-700 font-semibold">Healthy</label>
           </div>
           <div>
             <input
@@ -148,7 +149,7 @@ const CatRegistrationForm = () => {
               name="healthy"
               checked={formData.healthState.healthy}
               onChange={handleHealthStateChange}
-              className="form-checkbox h-4 w-4 text-yellow-500 border-yellow-400 focus:ring-yellow-500"
+              className="form-checkbox h-4 w-4 text-[#D9BFB0] focus:ring-[#C29B87]"
             />
           </div>
         </div>
@@ -156,8 +157,8 @@ const CatRegistrationForm = () => {
 
       <div className="rounded-lg bg-[#D9BFB0] border bg-[#C29B87] p-4 m-4 text-xs shadow-lg">
         <div className="flex items-center justify-between">
-          <div >
-            <label className="text-brown-700">Allergies</label>
+          <div>
+            <label className="text-brown-700 font-semibold">Allergies</label>
           </div>
           <div>
             <input
@@ -165,7 +166,7 @@ const CatRegistrationForm = () => {
               name="allergies"
               checked={formData.healthState.allergies}
               onChange={handleHealthStateChange}
-              className="form-checkbox h-4 w-4 text-yellow-500 border-yellow-400 focus:ring-yellow-500"
+              className="form-checkbox h-4 w-4 text-[#D9BFB0] focus:ring-[#C29B87]"
             />
           </div>
         </div>
@@ -174,7 +175,7 @@ const CatRegistrationForm = () => {
       <div className="rounded-lg bg-[#D9BFB0] border bg-[#C29B87] p-4 m-4 text-xs shadow-lg">
         <div className="flex items-center justify-between ">
           <div>
-            <label className="text-brown-700">Vaccinated</label>
+            <label className="text-brown-700 font-semibold">Vaccinated</label>
           </div>
           <div>
             <input
@@ -182,7 +183,7 @@ const CatRegistrationForm = () => {
               name="vaccinated"
               checked={formData.healthState.vaccinated}
               onChange={handleHealthStateChange}
-              className="form-checkbox h-4 w-4 text-yellow-500 border-yellow-400 focus:ring-yellow-500"
+              className="form-checkbox h-4 w-4 text-[#D9BFB0] focus:ring-[#C29B87]"
             />
           </div>
         </div>
@@ -190,9 +191,9 @@ const CatRegistrationForm = () => {
 
       <button
         type="submit"
-        className="w-full border border-black bg-orange-500 text-white py-2 px-4 rounded-lg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500"
+        className="bg-brown-500 text-white py-2 px-4 rounded-lg hover:bg-brown-300 focus:outline-none"
       >
-        Register Cat
+        Regist
       </button>
     </form>
   );

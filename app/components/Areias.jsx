@@ -31,7 +31,7 @@ export default function Areias() {
     }, []);
 
     return (
-        <div className="rounded-2xl bg-white/80 p-5 shadow-lg">
+        <div className="rounded-2xl bg-[#FCEEDB] p-5 shadow-lg">
             <div className="w-[300px] h-[100px] flex flex-col justify-center items-center">
                 <h1 className="text-xl font-bold text-[#cfab6d]">Areias</h1>
                 <ProgressBar totalRecursos={totalRecursos} totalConsumo={totalConsumo}/>

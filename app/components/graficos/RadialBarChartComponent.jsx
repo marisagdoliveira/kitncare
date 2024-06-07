@@ -29,7 +29,7 @@ const RadialBarChartComponent = (props) => {
 
     return (
         <RadialBarChart width={200} height={200} innerRadius="70%" outerRadius="90%" data={data}>
-            <RadialBar minAngle={15} label={{ fill: '#fff', position: 'insideStart' }} background clockWise dataKey="value" />
+            <RadialBar minAngle={15} label={{ fill: '#000', position: 'insideStart' }} background clockWise dataKey="value" />
             <Tooltip />
             <Legend />
         </RadialBarChart>

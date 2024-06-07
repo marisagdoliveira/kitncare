@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
-import { useRouter } from "next/navigation";
+
 import CatProfile from "../components/CatProfile";
 
 export default function Homepage() {
@@ -11,9 +11,6 @@ export default function Homepage() {
     const [selectedCat, setSelectedCat] = useState(null); 
     const [profileOpen, setProfileOpen] = useState(false);
     const [imgPath, setImgPath] = useState(null);
-
-    const router = useRouter();
-    const currentUrl = router.asPath;
 
     useEffect(() => {
         async function fetchData() {
@@ -65,7 +62,7 @@ export default function Homepage() {
                     {cats.map((cat, index) => (
                         <li key={cat._id}>
                             <div
-                                className="flex gap-5 items-center py-3 px-5 bg-white rounded-lg shadow-md cursor-pointer"
+                                className="flex gap-5 items-center py-3 px-5 bg-[#FCEEDB] rounded-lg shadow-md cursor-pointer"
                                 onClick={() => handleCatClick(cat._id, index)} 
                             >
                                 <div className="size-16 bg-black  rounded-full">
@@ -85,7 +82,7 @@ export default function Homepage() {
                     ))}
                 </ul>
             )}
-            <NavBar currentUrl={currentUrl} />
+            <NavBar  />
 
             {profileOpen && <CatProfile cat={selectedCat} onClose={closeProfile} imgPath={imgPath} />}
         </div>

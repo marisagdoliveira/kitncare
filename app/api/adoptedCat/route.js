@@ -1,6 +1,7 @@
 import { connectMongoDB } from "@/lib/mongodb";
+import AdoptedCat from "@/models/adoptedCat";
 import mongoose from "mongoose";
-import Cat from "@/models/cat"; 
+
 import { NextResponse } from "next/server";
 
 export async function GET(req) {
@@ -11,12 +12,12 @@ export async function GET(req) {
         const params = new URLSearchParams(url.search);
         const catId = params.get("catId");
 
-     
+        
         if (!mongoose.Types.ObjectId.isValid(catId)) {
             return NextResponse.json({ message: "Invalid catId." }, { status: 400 });
         }
 
-        const getCat = await Cat.findOne({ _id: catId });
+        const getCat = await AdoptedCat.findOne({ _id: catId }); 
 
         if (!getCat) {
             return NextResponse.json({ message: "Cat not found." }, { status: 404 });

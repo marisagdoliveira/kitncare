@@ -24,7 +24,7 @@ export async function GET(req) {
         });
 
         const suppliesCount = await Supplies.countDocuments();
-        const sandConsumption = cats.length * 300;
+        const sandConsumption = cats.length * 250;
 
         return NextResponse.json({
             normalFoodConsumption: normalFoodConsumption,

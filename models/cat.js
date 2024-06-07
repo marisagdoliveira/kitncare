@@ -16,7 +16,7 @@ const HealthStateSchema = new Schema({
     }
 }, { _id: false });
 
-// Function to calculate the consumption based on health state, size, and age
+
 const calculateConsumption = (healthState, size, age) => {
     let foodType = "Normal";
     let baseQuantity = 100; // Base quantity in grams
@@ -40,7 +40,7 @@ const calculateConsumption = (healthState, size, age) => {
             baseQuantity = 100; // Default case if the size is not recognized
     }
 
-    // Adjust quantity based on age
+
     if (ageInYears < 2) {
         baseQuantity -= 20;
     } else if (ageInYears >= 2 && ageInYears <= 10) {
@@ -50,7 +50,7 @@ const calculateConsumption = (healthState, size, age) => {
     return { foodType, quantity: `${baseQuantity}g/day` };
 };
 
-// Schema for cat
+
 const CatSchema = new Schema({
     name: {
         type: String,
@@ -72,7 +72,7 @@ const CatSchema = new Schema({
         type: String,
         required: true,
     },
-    healthState: HealthStateSchema, // Subdocument schema
+    healthState: HealthStateSchema,
     consumption: {
         foodType: {
             type: String,
@@ -89,7 +89,7 @@ const CatSchema = new Schema({
     }
 }, { timestamps: true });
 
-// Pre-save middleware to calculate 'consumption' before saving a document
+
 CatSchema.pre('save', function (next) {
     this.consumption = calculateConsumption(this.healthState, this.size, this.age);
     next();

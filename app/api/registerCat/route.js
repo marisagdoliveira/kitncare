@@ -62,6 +62,6 @@ const calculateConsumption = (healthState, size, age) => {
         baseQuantity += 20;
     }
 
-    return { foodType, quantity: `${baseQuantity}g/day` };
+    return { foodType, quantity: baseQuantity};
 };
 

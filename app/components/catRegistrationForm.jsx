@@ -1,6 +1,8 @@
-// components/CatRegistrationForm.js
 "use client";
 import { useState } from "react";
+import { FaHeartCirclePlus } from "react-icons/fa6";
+
+
 
 const CatRegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -49,12 +51,12 @@ const CatRegistrationForm = () => {
   };
 
   return (
-<form
+    <form
       className="cat-form overflow-hidden mb-32 mr-5 ml-5 mt-10 p-4 rounded-lg"
       onSubmit={handleSubmit}
     >
 
-      <div className="rounded-lg bg-[#D9BFB0] border bg-[#C29B87] p-4 m-4 text-xs shadow-lg">
+      <div className="rounded-lg bg-[#D9BFB0] p-4 m-4 text-xs shadow-lg">
         <div className="flex justify-between space-y-2">
           <label className="text-brown-700 font-semibold">Name:</label>
           <input
@@ -68,7 +70,7 @@ const CatRegistrationForm = () => {
         </div>
       </div>
 
-      <div className="rounded-lg bg-[#D9BFB0] border bg-[#C29B87] p-4 m-4 text-xs shadow-lg">
+      <div className="rounded-lg bg-[#D9BFB0] p-4 m-4 text-xs shadow-lg">
         <div className="flex justify-between space-y-2">
           <label className="text-brown-700 font-semibold">Age:</label>
           <input
@@ -82,7 +84,7 @@ const CatRegistrationForm = () => {
         </div>
       </div>
 
-      <div className="rounded-lg bg-[#D9BFB0] border bg-[#C29B87] p-4 m-4 text-xs shadow-lg">
+      <div className="rounded-lg bg-[#D9BFB0] p-4 m-4 text-xs shadow-lg">
         <div className="flex justify-between space-y-2">
           <label className="text-brown-700 font-semibold">Gender:</label>
           <select
@@ -101,7 +103,7 @@ const CatRegistrationForm = () => {
         </div>
       </div>
 
-      <div className="rounded-lg bg-[#D9BFB0] border bg-[#C29B87] p-4 m-4 text-xs shadow-lg">
+      <div className="rounded-lg bg-[#D9BFB0] p-4 m-4 text-xs shadow-lg">
         <div className="flex items-center justify-between">
           <div>
             <label className="text-brown-700 font-semibold">Castrated</label>
@@ -128,7 +130,7 @@ const CatRegistrationForm = () => {
             required
             className="p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C29B87]"
           >
-            <option value="" disabled>
+            <option value="" disabled className="absolute right-0">
               Select...
             </option>
             <option value="small">Small</option>
@@ -138,7 +140,7 @@ const CatRegistrationForm = () => {
         </div>
       </div>
 
-      <div className="rounded-lg bg-[#D9BFB0] border bg-[#C29B87] p-4 m-4 text-xs shadow-lg">
+      <div className="rounded-lg bg-[#D9BFB0] p-4 m-4 text-xs shadow-lg">
         <div className="flex items-center justify-between">
           <div>
             <label className="text-brown-700 font-semibold">Healthy</label>
@@ -155,7 +157,7 @@ const CatRegistrationForm = () => {
         </div>
       </div>
 
-      <div className="rounded-lg bg-[#D9BFB0] border bg-[#C29B87] p-4 m-4 text-xs shadow-lg">
+      <div className="rounded-lg bg-[#D9BFB0] p-4 m-4 text-xs shadow-lg">
         <div className="flex items-center justify-between">
           <div>
             <label className="text-brown-700 font-semibold">Allergies</label>
@@ -172,7 +174,7 @@ const CatRegistrationForm = () => {
         </div>
       </div>
 
-      <div className="rounded-lg bg-[#D9BFB0] border bg-[#C29B87] p-4 m-4 text-xs shadow-lg">
+      <div className="rounded-lg bg-[#D9BFB0]  p-4 m-4 text-xs shadow-lg">
         <div className="flex items-center justify-between ">
           <div>
             <label className="text-brown-700 font-semibold">Vaccinated</label>
@@ -191,9 +193,11 @@ const CatRegistrationForm = () => {
 
       <button
         type="submit"
-        className="bg-brown-500 text-white py-2 px-4 rounded-lg hover:bg-brown-300 focus:outline-none"
+        className="flex gap-2 bg-brown-500 text-2xl text-white py-2 px-4 rounded-3xl w-36 h-12 hover:bg-brown-300 focus:outline-none"
       >
-        Regist
+        Add
+        <div><FaHeartCirclePlus className="mb-6 size-8" /></div>
+
       </button>
     </form>
   );

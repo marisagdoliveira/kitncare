@@ -12,22 +12,22 @@ const NavBar = () => {
         { icon: <Icon1 />, dis: 0, path: "/homepage" },
         { icon: <Icon2 />, dis: 1 / 4, path: "/registcat" },
         { icon: <Icon3 />, dis: 2 / 4, path: "/listofcats" },
-        { icon: <Icon5 />, dis: 4 / 4, path: "/ship" }, 
-        { icon: <Icon4 />, dis: 3 / 4, path: "/account" },
+        { icon: <Icon4 />, dis: 3 / 4, path: "/ship" },
+        { icon: <Icon5 />, dis: 4 / 4, path: "/account" }, 
     ];
 
     const getActiveIndex = (url) => {
         switch (url) {
             case "/account":
-                return 3;
+                return 4;
             case "/registcat":
                 return 1;
             case "/listofcats":
                 return 2;
-            case "/homepage":
-                return 0;
-            case "/ship": 
-                return 4;
+                case "/homepage":
+                    return 0;
+                    case "/ship": 
+                        return 3;
             default:
                 return null;
         }

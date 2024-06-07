@@ -91,7 +91,7 @@ const CatProfile = ({ cat, onClose, imgPath }) => {
                                 <p className="ml-10 font-bold text-yellow-800">{cat.age}</p>
                             </div>
                             <div className="flex justify-between">
-                                <p className="font-semibold text-yellow-600 mt-5">Sex:</p>
+                                <p className="font-semibold text-yellow-600 mt-5">Gender:</p>
                                 <p className="ml-10 font-bold text-yellow-800 mt-5">{cat.sex}</p>
                             </div>
                             <div className="flex justify-between">

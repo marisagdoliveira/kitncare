@@ -63,6 +63,8 @@ const NavBar = () => {
     return (
         <div className="fixed bottom-0 left-0 right-0 transition-all">
             <div className="bg-[#72625A] h-16 w-full flex justify-around items-center mx-auto relative rounded-t-2xl">
+                
+                
                 <ul className="flex justify-around w-full relative">
                     <span
                         className="bg-[#D9BFB0] duration-500 border-4 border-gray-900 h-20 w-20 absolute top-0 transform -translate-y-1/2 rounded-full flex justify-center items-center"
@@ -80,6 +82,7 @@ const NavBar = () => {
                             onClick={() => handleClick(i)}
                         >
                             <p className="flex flex-col text-center pt-2 cursor-pointer text-white">
+                                
                                 <Link href={menu.path}>
                                     <span
                                         className={`text-3xl duration-500 ${i === active ? "opacity-0" : "opacity-100"

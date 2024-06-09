@@ -1,15 +1,36 @@
 import Supplies from "@/models/supplies";
 import { NextResponse } from "next/server";
 import { connectMongoDB } from "@/lib/mongodb";
+import mongoose from 'mongoose';
+
+
+
+
+export async function GET(req) {
+    try {
+        await connectMongoDB();
+
+
+        const cats = await Supplies.find({}).lean();
+
+        return NextResponse.json(cats, { status: 200 });
+    } catch (error) {
+        console.error(error);
+        return NextResponse.json({ message: "An error occurred while retrieving cats." }, { status: 500 });
+    }
+}
 
 export async function PATCH(req) {
     console.log("test");
     try {
         await connectMongoDB();
         const body = await req.json();
-        const { normalFood, specialFood, sand, medKit } = body;
+        const { _id, normalFood, specialFood, sand, medKit } = body;
 
-        let getSupplies = await Supplies.findOne();
+        // Convert _id to ObjectId
+        const objectId = mongoose.Types.ObjectId(_id);
+
+        let getSupplies = await Supplies.findOne({ _id: objectId });
 
         if (!getSupplies) {
             return NextResponse.json({ message: "Supplies not found." }, { status: 404 });
@@ -36,18 +57,3 @@ export async function PATCH(req) {
         return NextResponse.json({ message: "An error occurred while updating the supplies." }, { status: 500 });
     }
 }
-
-export async function GET(req) {
-    try {
-        await connectMongoDB();
-
-
-        const cats = await Supplies.find({}).lean();
-
-        return NextResponse.json(cats, { status: 200 });
-    } catch (error) {
-        console.error(error);
-        return NextResponse.json({ message: "An error occurred while retrieving cats." }, { status: 500 });
-    }
-}
-

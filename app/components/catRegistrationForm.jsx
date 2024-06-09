@@ -8,7 +8,7 @@ const CatRegistrationForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     age: "",
-    Gender: "",
+    sex: "", // Change from Gender to sex
     castrated: false,
     size: "",
     healthState: {
@@ -88,15 +88,13 @@ const CatRegistrationForm = () => {
         <div className="flex justify-between space-y-2">
           <label className="text-brown-700 font-semibold">Gender:</label>
           <select
-            name="gender"
-            value={formData.gender}
+            name="sex" // Change from gender to sex
+            value={formData.sex}
             onChange={handleChange}
             required
             className="p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C29B87]"
           >
-            <option value="" disabled>
-              Select...
-            </option>
+            <option value="" disabled>Select...</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
